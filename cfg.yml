@@ -1,0 +1,44 @@
+###
+GPT_124M_PED:
+    vocab_size: 50257
+    n_layers: 12            # Number of layers
+    context_len: 256        # Context length *
+    emb_dim: 768            # Embedding dimension
+    n_heads: 12             # Number of attention heads
+    qkv_bias: False         # Query-Key-Value bias *
+    drop_attn_rate: 0.1     # Dropout rate for multihead attention
+    drop_skip_rate: 0.1     # Dropout rate for skip connection
+    drop_emb_rate: 0.1      # Dropout rate for embedding
+
+    ff_upscale: 4
+    weight_decay: 0.1
+
+
+GPT_124M:
+    vocab_size: 50257
+    n_layers: 12            # Number of layers
+    context_len: 1024       # Context length *
+    emb_dim: 768            # Embedding dimension
+    n_heads: 12             # Number of attention heads
+    qkv_bias: True          # Query-Key-Value bias *
+    drop_attn_rate: 0.0     # Dropout rate for multihead attention *
+    drop_skip_rate: 0.0     # Dropout rate for skip connection *
+    drop_emb_rate: 0.0      # Dropout rate for embedding *
+
+    ff_upscale: 4
+    weight_decay: 0.1
+
+
+GPT_355M:
+    vocab_size: 50257
+    n_layers: 24            # Number of layers
+    context_len: 1024       # Context length *
+    emb_dim: 1024           # Embedding dimension
+    n_heads: 16             # Number of attention heads
+    qkv_bias: True          # Query-Key-Value bias *
+    drop_attn_rate: 0.0     # Dropout rate for multihead attention *
+    drop_skip_rate: 0.0     # Dropout rate for skip connection *
+    drop_emb_rate: 0.0      # Dropout rate for embedding *
+
+    ff_upscale: 4
+    weight_decay: 0.1
